@@ -3,7 +3,7 @@ package org.example.sort;
 import java.util.Scanner;
 
 public class Sort {
-    public static boolean isSort(){
+    public static void isSort(){
         Scanner scanner=new Scanner(System.in);
         String[] firstNames=new String[3];
         System.out.println("Donner un premier prénom :");
@@ -15,10 +15,9 @@ public class Sort {
         for(int i=0;i<2;i++){
             if(firstNames[i].compareTo(firstNames[i+1])>0){
                 System.out.println("Les Prénoms ne sont pas dans l'orde alphabétique");
-                return false;
+                return;
             }
         }
         System.out.println("Les Prénoms  sont  dans l'orde alphabétique");
-        return true;
     }
 }
