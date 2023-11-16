@@ -9,7 +9,7 @@ public class NegativePositive {
         int nb1=scanner.nextInt();
         System.out.println("Donner un  deuxième nombre :");
         int nb2=scanner.nextInt();
-        if(nb1*nb2>=0){
+        if((nb1>=0 && nb2 >=0) || (nb1<0 && nb2<0)){
             System.out.println("Votre nombre est positif");
         }else{
             System.out.println("VOtre nombre est négatif");
