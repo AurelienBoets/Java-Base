@@ -13,7 +13,7 @@ public class Sort {
         System.out.println("Donner un troisième prénom :");
         firstNames[2]=scanner.next();
         for(int i=0;i<2;i++){
-            if(firstNames[i].compareTo(firstNames[i+1])>0){
+            if(firstNames[i].toLowerCase().compareTo(firstNames[i+1].toLowerCase())>0){
                 System.out.println("Les Prénoms ne sont pas dans l'orde alphabétique");
                 return;
             }
