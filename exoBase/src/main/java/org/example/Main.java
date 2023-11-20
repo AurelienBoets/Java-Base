@@ -50,15 +50,15 @@ public class Main {
 //        ExoTab6.tabRand();
 //        ExoTab7.searchGreatNumber();
 //        ExoTAb5_1.shearchN();
-//        int[] tab={5,2,6,8,3,9,5};
+//        int[] tab={25,5,2,6,8,3,9,8,15,8};
 //        ExoTab5_2.isCroissant(tab);
 //        ExoTab5_3.greatDifference(tab);
 //        ExoTab5_4.decal(tab);
 //        ExoTab5_5.reverseTab(tab);
 //        ExoTab5_6.selectionSort(tab);
 //        ExoTab5_7.bubbleSort(tab);
-        int[][] tab1={{5,2,3},{9,6,7}};
-        int[][] tab2={{5,2,3},{9,6,7}};
-        ExoTab5_8.sumTab(tab1,tab2);
+//        int[][] tab1={{5,2,3},{9,6,7}};
+//        int[][] tab2={{5,2,3},{9,6,7}};
+//        ExoTab5_8.sumTab(tab1,tab2);
     }
     }
