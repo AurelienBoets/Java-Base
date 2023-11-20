@@ -2,6 +2,14 @@ package org.example;
 
 import org.example._5_10._5_10;
 import org.example._5_11._5_11;
+import org.example.exoTab5_1.ExoTAb5_1;
+import org.example.exoTab5_2.ExoTab5_2;
+import org.example.exoTab5_3.ExoTab5_3;
+import org.example.exoTab5_4.ExoTab5_4;
+import org.example.exoTab5_5.ExoTab5_5;
+import org.example.exoTab5_6.ExoTab5_6;
+import org.example.exoTab5_7.ExoTab5_7;
+import org.example.exoTab5_8.ExoTab5_8;
 import org.example.exoTab6.ExoTab6;
 import org.example.exoTab7.ExoTab7;
 import org.example.exotab1.ExoTab1;
@@ -41,5 +49,16 @@ public class Main {
 //        ExoTab5.randomTab();
 //        ExoTab6.tabRand();
 //        ExoTab7.searchGreatNumber();
+//        ExoTAb5_1.shearchN();
+//        int[] tab={5,2,6,8,3,9,5};
+//        ExoTab5_2.isCroissant(tab);
+//        ExoTab5_3.greatDifference(tab);
+//        ExoTab5_4.decal(tab);
+//        ExoTab5_5.reverseTab(tab);
+//        ExoTab5_6.selectionSort(tab);
+//        ExoTab5_7.bubbleSort(tab);
+        int[][] tab1={{5,2,3},{9,6,7}};
+        int[][] tab2={{5,2,3},{9,6,7}};
+        ExoTab5_8.sumTab(tab1,tab2);
     }
     }

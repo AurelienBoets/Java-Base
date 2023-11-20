@@ -8,9 +8,11 @@ public class ExoTab7 {
         Random rand=new Random();
         int[] tab=new int[10];
         int max=0;
+        for (int i = 0; i < tab.length; i++) {
+            tab[i]= rand.nextInt();
+        }
         for (int i:tab
         ) {
-            i= rand.nextInt();
             if(max<i){
                 max=i;
             }
