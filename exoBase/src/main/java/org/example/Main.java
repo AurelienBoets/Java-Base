@@ -2,6 +2,7 @@ package org.example;
 
 import org.example.array.*;
 import org.example.base.*;
+import org.example.function.*;
 import org.example.matrix.*;
 import org.example.string.*;
 
@@ -63,6 +64,11 @@ public class Main {
 //        int[][] emptyMatrix=new int[4][5];
 //        Exo8_1.searchGreatNumber(matrix);
 //        Exo8_2.setMatrix(emptyMatrix);
-        Exo8_3.sellVehicle();
+//        Exo8_3.sellVehicle();
+//        Exo1.createTab();
+//        Exo2.inputDim();
+//        Exo3.countWord();
+//        Exo4.inputWords();
+
     }
-    }
+}
