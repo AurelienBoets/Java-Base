@@ -2,6 +2,7 @@ package org.example;
 
 import org.example.array.*;
 import org.example.base.*;
+import org.example.matrix.*;
 import org.example.string.*;
 
 
@@ -57,6 +58,11 @@ public class Main {
 //        Anagram.isAnagram(s1,s2);
 //        String pal="kayak";
 //        Palindrome.isPalindrome(pal);
-        Pyramid.create();
+//        Pyramid.create();
+//        int[][] matrix={{8,58,94,25},{84,45,25,3},{87,45,21,1}};
+//        int[][] emptyMatrix=new int[4][5];
+//        Exo8_1.searchGreatNumber(matrix);
+//        Exo8_2.setMatrix(emptyMatrix);
+        Exo8_3.sellVehicle();
     }
     }
