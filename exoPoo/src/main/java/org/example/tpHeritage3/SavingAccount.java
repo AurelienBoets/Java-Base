@@ -12,6 +12,7 @@ public class SavingAccount extends Account{
         this.balance*=(interestRate/100+1);
     }
 
+    @Override
     public String toString() {
         return super.toString()+String.format("Votre taux d'intérêts est à %.2f%%\n",this.interestRate);
     }

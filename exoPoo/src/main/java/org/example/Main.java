@@ -35,7 +35,7 @@ public class Main {
 
         PayAccount payAccount=new PayAccount(0);
         payAccount.add(150);
-        System.out.println(payAccount.toString());
+        System.out.println(payAccount);
 
         SavingAccount savingAccount=new SavingAccount( 0, 9.5F);
         savingAccount.add(150);
@@ -44,6 +44,6 @@ public class Main {
 
         SimpleAccount simpleAccount=new SimpleAccount(0,-500);
         simpleAccount.debit(600);
-        System.out.println(simpleAccount.toString());
+        System.out.println(simpleAccount);
     }
 }
