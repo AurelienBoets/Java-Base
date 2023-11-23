@@ -15,9 +15,7 @@ public class Demo {
                     D""");
             String message=sc.next();
             switch (message){
-                case "A"->{
-                    messageType=MessageType.A;
-                }
+                case "A" ->messageType=MessageType.A;
                 case "B" ->messageType=MessageType.B;
                 case "C" ->messageType=MessageType.C;
                 case "D" ->messageType=MessageType.D;
