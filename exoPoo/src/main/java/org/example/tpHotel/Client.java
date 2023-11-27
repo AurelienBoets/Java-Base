@@ -1,14 +1,11 @@
 package org.example.tpHotel;
 
 public class Client {
-    private static int count=0;
+    private static int count=1;
     private int id;
     private String firstName;
     private String lastName;
     private String phone;
-    static {
-        count++;
-    }
 
     public String getFirstName() {
         return firstName;
@@ -39,7 +36,7 @@ public class Client {
     }
 
     public Client(String firstName, String lastName, String phone) {
-        this.id=count;
+        this.id=count++;
         this.firstName = firstName;
         this.lastName = lastName;
         this.phone = phone;
@@ -47,7 +44,7 @@ public class Client {
 
     @Override
     public String toString() {
-        return "Client{" +
+        return id +"{"+
                 "Prénom='" + firstName + '\'' +
                 ", Nom='" + lastName + '\'' +
                 ", Téléphone='" + phone + '\'' +

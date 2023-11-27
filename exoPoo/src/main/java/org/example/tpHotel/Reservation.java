@@ -2,6 +2,7 @@ package org.example.tpHotel;
 
 public class Reservation {
     private int num;
+    private static int count=1;
     private StateReservation stateReservation;
     private Client client;
     private Room room;
@@ -34,8 +35,8 @@ public class Reservation {
         this.room = room;
     }
 
-    public Reservation(int num, StateReservation stateReservation, Client client, Room room) {
-        this.num = num;
+    public Reservation( StateReservation stateReservation, Client client, Room room) {
+        this.num = count++;
         this.stateReservation = stateReservation;
         this.client = client;
         this.room = room;

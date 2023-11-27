@@ -2,7 +2,7 @@ package org.example.tpHotel;
 
 public class Room {
     private int num;
-    private StateReservation stateReservation;
+    private StateRoom stateRoom;
     private double price;
     private int capacity;
 
@@ -10,8 +10,8 @@ public class Room {
         return num;
     }
 
-    public StateReservation getStateReservation() {
-        return stateReservation;
+    public StateRoom getStateRoom() {
+        return stateRoom;
     }
 
     public double getPrice() {
@@ -22,8 +22,8 @@ public class Room {
         return capacity;
     }
 
-    public void setStateReservation(StateReservation stateReservation) {
-        this.stateReservation = stateReservation;
+    public void setStateRoom(StateRoom stateRoom) {
+        this.stateRoom = stateRoom;
     }
 
     public void setPrice(double price) {
@@ -44,7 +44,7 @@ public class Room {
     public String toString() {
         return String.format("Chambre{" +
                 "Numéro=" + num +
-                ", Statut=" + stateReservation +
+                ", Statut=" + stateRoom +
                 ", Prix= %.2f"  +
                 ", Capacité=" + capacity +
                 '}',price);

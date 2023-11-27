@@ -59,6 +59,45 @@ public class Hotel {
         }
     }
 
+    public Client getClientById(int id){
+        for (Client i:this.clients) {
+            if(i.getId()==id){
+                return i;
+            }
+        }
+        return null;
+    }
+
+    public Room getRoomByNum(int num){
+        for(Room i:this.rooms){
+            if(i.getNum()==num){
+                return i;
+            }
+        }
+        return null;
+    }
+
+    public Room[] getRoomEmpty(){
+        Room[] rooms=new Room[0];
+        for (Room i:this.rooms){
+            if(i.getStateRoom()!=StateRoom.Occupée){
+                rooms=Arrays.copyOf(rooms,rooms.length+1);
+                rooms[rooms.length-1]=i;
+            }
+        }
+        return rooms;
+    }
+
+    public Room[] getRoomByCapacity(int capacity){
+        Room[] rooms=new Room[0];
+        for(Room i:getRoomEmpty()){
+            if(i.getCapacity()>=capacity){
+                rooms=Arrays.copyOf(rooms,rooms.length+1);
+                rooms[rooms.length-1]=i;
+            }
+        }
+        return rooms;
+    }
     public Reservation[] filterByClient(Client client){
         Reservation[] reservations=new Reservation[0];
         for (Reservation i:
@@ -69,5 +108,11 @@ public class Hotel {
             }
         }
         return reservations;
+    }
+
+    public void addReservation(Reservation reservation){
+        Reservation[] reservations=Arrays.copyOf(this.reservations,getReservations().length+1);
+        reservations[reservations.length-1]=reservation;
+        setReservations(reservations);
     }
 }
