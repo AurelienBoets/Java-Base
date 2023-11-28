@@ -48,8 +48,7 @@ public class IHM {
         String firstName=sc.next().trim();
         System.out.println("Indiquez le numéro de téléphone du client");
         String phone= sc.next().trim();
-        Client client=new Client(firstName,lastName,phone);
-        return client;
+        return new Client(firstName,lastName,phone);
     }
 
     public void displayReservation(Hotel hotel){
