@@ -42,7 +42,7 @@ public class Library {
         return filterArray;
     }
 
-    public void borrowBook(int idBook, Person person) {
+    public void borrowBook(long idBook, Person person) {
         for (Loan loan : this.loans) {
             if (loan.getIdBook() == idBook) {
                 System.out.println("Le livre est déjà emprunté");
@@ -60,7 +60,7 @@ public class Library {
         }
     }
 
-    public void returnBook(int idBook){
+    public void returnBook(long idBook){
         for (Loan loan:this.loans) {
             if(loan.getIdBook()==idBook){
                 this.loans.remove(loan);
@@ -69,10 +69,8 @@ public class Library {
         }
     }
 
-    public void displayLoans(){
-        for (Loan loan:this.loans) {
-            System.out.println(loan);
-        }
+    public ArrayList<Book> getBooks() {
+        return books;
     }
 
     public Library() {

@@ -6,18 +6,18 @@ import java.time.format.DateTimeFormatter;
 
 public class Loan {
     private Person person;
-    private int idBook;
+    private long idBook;
     private LocalDate startDate;
     private LocalDate endDate;
 
-    public Loan(Person person, int idBook, LocalDate startDate, LocalDate endDate) {
+    public Loan(Person person, long idBook, LocalDate startDate, LocalDate endDate) {
         this.person = person;
         this.idBook = idBook;
         this.startDate = startDate;
         this.endDate = endDate;
     }
 
-    public int getIdBook() {
+    public long getIdBook() {
         return idBook;
     }
 

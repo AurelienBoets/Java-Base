@@ -2,10 +2,10 @@ package org.example.tpBibliotheque;
 
 public class Book {
 
-    private static int count=1;
+    private static long count=1;
     protected String title;
     protected String author;
-    protected int id;
+    protected long id;
 
     public Book(String title, String author) {
         this.id=count++;
@@ -13,7 +13,7 @@ public class Book {
         this.author = author;
     }
 
-    public int getId() {
+    public long getId() {
         return id;
     }
 

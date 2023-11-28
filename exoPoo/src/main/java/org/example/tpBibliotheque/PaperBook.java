@@ -1,12 +1,12 @@
 package org.example.tpBibliotheque;
 
 public class PaperBook extends Book{
-    private int amoutPage;
+    private int amountPage;
     private String edition;
 
-    public PaperBook(String title, String author, int amoutPage, String edition) {
+    public PaperBook(String title, String author, int amountPage, String edition) {
         super(title, author);
-        this.amoutPage = amoutPage;
+        this.amountPage = amountPage;
         this.edition = edition;
     }
 }
