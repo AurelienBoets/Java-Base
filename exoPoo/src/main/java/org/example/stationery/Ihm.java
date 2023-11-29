@@ -5,11 +5,11 @@ import java.util.List;
 import java.util.Scanner;
 
 public class Ihm {
-    private static Scanner sc=new Scanner(System.in);
-    private static Stationery stationery=new Stationery();
+    private static final Scanner sc=new Scanner(System.in);
+    private static final Stationery stationery=new Stationery();
 
     public static void start(){
-        int choice=0;
+        int choice;
         do {
             System.out.print(menu());
             choice= sc.nextInt();
@@ -35,7 +35,7 @@ public class Ihm {
     }
 
     private static void addArticle(){
-        int choice=0;
+        int choice;
         do {
         System.out.println("""
                 Choississez le format
