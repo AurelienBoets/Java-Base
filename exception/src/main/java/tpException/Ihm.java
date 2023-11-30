@@ -14,12 +14,13 @@ public class Ihm {
         do {
             System.out.println("Tapez un nombre \n Tapez 0 pour quittez");
             try{
-                choice=Integer.parseInt(sc.next());
+                choice= sc.nextInt();
                 if(choice!=0){
                     list.add(choice);
                 }
 
-            }catch(NumberFormatException e){
+            }catch(InputMismatchException e){
+                sc.nextLine();
                 System.out.println(e.getMessage());
                 choice=1;
             }
