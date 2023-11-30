@@ -6,28 +6,16 @@ import java.util.List;
 import java.util.Scanner;
 
 public class Ihm {
-    private static Scanner sc=new Scanner(System.in);
+    private static Scanner sc = new Scanner(System.in);
+    private static List<Integer> list = new ArrayList<>();
 
-    public static void start(){
-        int choice;
-        List<Integer> list=new ArrayList<>();
-        do {
-            System.out.println("Tapez un nombre \n Tapez 0 pour quittez");
-            try{
-                choice= sc.nextInt();
-                if(choice!=0){
-                    list.add(choice);
-                }
+    public static void start() {
 
-            }catch(InputMismatchException e){
-                sc.nextLine();
-                choice=1;
-            }
-        }while(choice!=0);
 
-        try{
-            System.out.println("Le résultat est: "+sumArray(list));
-        }catch (EmptyArrayException e){
+        try {
+            chooseNumber();
+            System.out.println("Le résultat est: " + sumArray(list));
+        } catch (EmptyArrayException e) {
             System.out.println(e.getMessage());
         }
     }
@@ -40,4 +28,24 @@ public class Ihm {
         }
         return result;
     }
+
+    private static void chooseNumber() {
+        int choice = 5;
+
+            System.out.println("Tapez un nombre \n Tapez 0 pour quittez");
+            try {
+                choice = sc.nextInt();
+                if (choice != 0) {
+                    list.add(choice);
+                }
+            } catch (InputMismatchException e) {
+                sc.nextLine();
+            }finally {
+                if(choice!=0){
+                    chooseNumber();
+                }
+            }
+    }
+
+
 }
