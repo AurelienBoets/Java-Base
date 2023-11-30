@@ -6,7 +6,7 @@ public class Main {
         try{
             System.out.println(tab[6]);
         }catch (ArrayIndexOutOfBoundsException e){
-            System.out.println(e.getMessage());
+            System.out.println("Error: "+e.getMessage());
         }
     }
 
