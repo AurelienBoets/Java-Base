@@ -21,7 +21,6 @@ public class Ihm {
 
             }catch(InputMismatchException e){
                 sc.nextLine();
-                System.out.println(e.getMessage());
                 choice=1;
             }
         }while(choice!=0);
