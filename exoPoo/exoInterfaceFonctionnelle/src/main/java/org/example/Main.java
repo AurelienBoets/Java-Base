@@ -2,10 +2,8 @@ package org.example;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Objects;
 
-// Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
-// then press Enter. You can now see whitespace characters in your code.
+
 public class Main {
     public static void main(String[] args) {
         List<Produit> produits=new ArrayList<>();
@@ -16,5 +14,7 @@ public class Main {
         System.out.println(produitEcole);
         List<Produit> produitMoinsDeux=Util.filtrerProduits(produits,(produit -> produit.getPrix()<2));
         System.out.println(produitMoinsDeux);
+        List<Produit> produitS=Util.filtrerProduits(produits,(produit -> produit.getNom().contains("S")));
+        System.out.println(produitS);
     }
 }

@@ -43,7 +43,7 @@ public class Ihm {
                 0. Retour""");
         int choice=sc.nextInt();
         switch (choice){
-
+                case 1 ->addPlace();
         }
     }
 
@@ -57,5 +57,32 @@ public class Ihm {
         int capacity=sc.nextInt();
         Place place=new Place(name,address,capacity);
         places.add(place);
+    }
+
+    private static void displayPlace(){
+        for (Place place:places) {
+            System.out.println(place);
+        }
+    }
+
+    private static void modifyPlace(){
+        displayPlace();
+        System.out.println("Tapez le nom du lieu");
+        sc.nextLine();
+        String name=sc.nextLine();
+        Place place=getPlaceByName(name);
+        if(place==null){
+            System.out.println("Aucun lieu correspondant");
+            return;
+        }
+        System.out.println("Indiquez le nouveau nom/Entrez sans rien tapez pour ne rien modifier");
+
+    }
+
+    private static Place getPlaceByName(String name){
+        for (Place place:places) {
+            if(place.getName().equals(name))return place;
+        }
+        return null;
     }
 }
