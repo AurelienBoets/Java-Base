@@ -1,4 +1,4 @@
-package Entity;
+package Entity.skill;
 
 public abstract class Skill {
     private static long count=0;

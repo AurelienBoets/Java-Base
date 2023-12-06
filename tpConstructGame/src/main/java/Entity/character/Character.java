@@ -1,6 +1,6 @@
 package Entity.character;
 
-import Entity.Skill;
+import Entity.skill.Skill;
 
 import java.util.HashSet;
 import java.util.Set;
@@ -10,6 +10,7 @@ public abstract class Character {
     protected long id;
     private static long count=0;
     protected String weapon;
+    protected long costGold;
     protected String name;
     protected long hp;
     protected long armor;
@@ -77,8 +78,9 @@ public abstract class Character {
         return level;
     }
 
-    protected Character(){
+    protected Character(long costGold){
         this.id=++count;
         this.level=1;
+        this.costGold=costGold;
     }
 }

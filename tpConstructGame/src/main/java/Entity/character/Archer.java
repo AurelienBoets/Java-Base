@@ -12,8 +12,8 @@ public class Archer extends Character{
     }
 
 
-    public Archer(String weapon,String name,long hp,long armor,long physicAtk,long mana,long magicAtk) {
-        super();
+    public Archer(String weapon,String name,long hp,long armor,long physicAtk,long mana,long magicAtk, long costGold) {
+        super(costGold);
         this.mana=mana;
         this.magicAtk=magicAtk;
         this.weapon=weapon;

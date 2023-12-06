@@ -1,26 +1,24 @@
-import Entity.building.Building;
-import Entity.character.Character;
-import java.util.ArrayList;
-import java.util.List;
+import Entity.Kingdom;
+import Entity.skill.Skill;
+
+import java.util.Comparator;
+import java.util.HashSet;
+import java.util.Set;
+import java.util.TreeSet;
 
 public class Storage {
 
     private static volatile Storage instance = null;
     private static final Object lock = new Object();
-    private static List<Character> characters;
-    private static List<Building> buildings;
+    private static Set<Skill> skills;
+    private static Set<Kingdom> kingdoms;
+
     private Storage(){
-        characters=new ArrayList<>();
-        buildings=new ArrayList<>();
+        skills=new TreeSet<>(Comparator.comparing(Skill::getName));
+        kingdoms=new HashSet<>();
     }
 
-    public List<Character> getCharacters(){
-        return characters;
-    }
 
-    public List<Building> getBuildings(){
-        return buildings;
-    }
 
     public static Storage getInstance() {
         if(instance == null) {

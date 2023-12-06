@@ -12,8 +12,8 @@ public  class Fighter extends Character{
     }
 
 
-    public Fighter(String weapon,String name,long hp,long armor,long physicAtk) {
-        super();
+    public Fighter(String weapon,String name,long hp,long armor,long physicAtk,long costGold) {
+        super(costGold);
         this.mana=0;
         this.magicAtk=0;
         this.weapon=weapon;

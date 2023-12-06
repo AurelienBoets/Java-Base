@@ -12,8 +12,8 @@ public class Caster extends Character{
     }
 
 
-    public Caster(String name,long hp,long armor,long physicAtk,long mana,long magicAtk) {
-        super();
+    public Caster(String name,long hp,long armor,long physicAtk,long mana,long magicAtk,long costGold) {
+        super(costGold);
         this.name=name;
         this.hp=hp;
         this.armor=armor;
