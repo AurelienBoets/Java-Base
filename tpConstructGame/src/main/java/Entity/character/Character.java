@@ -32,6 +32,11 @@ public abstract class Character {
                 magic attack: %d""",name,level,hp,mana,armor,physicAtk,magicAtk);
     }
 
+    public String addSkill(Skill skill){
+        this.skills.add(skill);
+        return "Vous avez appris le sort "+skill.getName();
+    }
+
     public long getId() {
         return id;
     }
