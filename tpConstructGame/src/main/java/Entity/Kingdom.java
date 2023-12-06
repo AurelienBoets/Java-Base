@@ -2,6 +2,7 @@ package Entity;
 
 import Entity.building.Building;
 import Entity.building.Castle;
+import Entity.character.Character;
 
 import java.util.*;
 
@@ -48,5 +49,35 @@ public class Kingdom {
 
     public void setGold(long gold) {
         this.gold = gold;
+    }
+
+    public Character getCharacterById(long id){
+        for (Character character:this.characters) {
+            if(character.getId()==id)
+                return character;
+        }
+        return null;
+    }
+
+    public void addCharacter(Character character) throws Exception{
+        if(character.getCostGold()>this.gold)
+            throw new Exception("Vous n'avez pas assez d'argent pour acheter ce personnage");
+        this.gold-=character.getCostGold();
+        this.characters.add(character);
+    }
+
+    public void addBuilding(Building building) throws Exception{
+        if(building.getCostGold()>this.gold)
+            throw new Exception("Vous n'avez pas assez d'or pour acheter ce bâtiment");
+        this.gold-= building.getCostGold();
+        this.buildings.add(building);
+    }
+
+    public Building getBuildingById(long id){
+        for(Building building:this.buildings){
+            if(building.getId()==id)
+                return building;
+        }
+        return null;
     }
 }

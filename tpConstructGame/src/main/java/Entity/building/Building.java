@@ -7,6 +7,8 @@ public abstract class Building {
     protected int size;
     protected String material;
 
+    protected long costGold;
+
     protected Building(){
         this.id=++count;
     }
@@ -37,5 +39,9 @@ public abstract class Building {
 
     public long getId() {
         return id;
+    }
+
+    public long getCostGold() {
+        return costGold;
     }
 }

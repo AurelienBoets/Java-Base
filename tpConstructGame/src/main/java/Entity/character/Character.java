@@ -78,6 +78,53 @@ public abstract class Character {
         return level;
     }
 
+    public long getCostGold() {
+        return costGold;
+    }
+
+    public void setWeapon(String weapon) {
+        this.weapon = weapon;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setHp(long hp) {
+        this.hp = hp;
+    }
+
+    public void setArmor(long armor) {
+        this.armor = armor;
+    }
+
+    public void setMana(long mana) {
+        this.mana = mana;
+    }
+
+    public void setPhysicAtk(long physicAtk) {
+        this.physicAtk = physicAtk;
+    }
+
+    public void setMagicAtk(long magicAtk) {
+        this.magicAtk = magicAtk;
+    }
+
+    public void setLevel(int level) {
+        this.level = level;
+    }
+
+    public void takeDamage(long damage) throws Exception{
+        damage-=this.armor;
+        if(damage<=0)
+            damage=1;
+        long currentHp=this.hp-damage;
+        if(currentHp<=0){
+            setHp(0);
+            throw new Exception(this.name+" n'a plus de point de vie");
+        }
+        setHp(currentHp);
+    }
     protected Character(long costGold){
         this.id=++count;
         this.level=1;

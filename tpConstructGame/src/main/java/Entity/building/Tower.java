@@ -6,12 +6,20 @@ public class Tower extends Building{
         this.color=(builder.color==null)? "Gris":builder.color;
         this.size=(builder.size==0)?1:builder.size;
         this.material=(builder.material==null)?"Pierre":builder.material;
+        this.costGold= builder.costGold;
     }
 
     public static class Builder{
-        public String color;
-        public int size;
-        public String material;
+        private String color;
+        private int size;
+        private String material;
+        private long costGold;
+
+        public Builder costGold(long constGold){
+            this.costGold=constGold;
+            return this;
+        }
+
 
         public Builder material(String material){
             this.material=material;

@@ -6,15 +6,21 @@ public class Forge extends Building{
         this.color=(builder.color==null)? "Noir":builder.color;
         this.size=(builder.size==0)?2:builder.size;
         this.material=(builder.material==null)?"Pierre":builder.material;
+        this.costGold= builder.costGold;
     }
 
     public static class Builder{
-        public String color;
-        public int size;
-        public String material;
+        private String color;
+        private int size;
+        private String material;
+        private long costGold;
 
         public Builder material(String material){
             this.material=material;
+            return this;
+        }
+        public Builder costGold(long constGold){
+            this.costGold=constGold;
             return this;
         }
 
