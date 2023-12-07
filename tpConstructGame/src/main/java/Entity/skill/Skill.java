@@ -1,6 +1,6 @@
 package Entity.skill;
 
-public abstract class Skill {
+public class Skill {
     private static long count=0;
     protected long id;
     protected String name;
